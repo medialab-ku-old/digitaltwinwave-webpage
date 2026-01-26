@@ -1,5 +1,6 @@
 export const locales = [
-    'ko'
+    'ko',
+    'en'
 ]
 
 export const defaultLocale = 'ko'

@@ -1,0 +1,210 @@
+{
+    "metadata": {
+        "title": {
+            "default": "DigitalTwinWave",
+            "template": "%s | DigitalTwinWave"
+        },
+        "description": "Leading the wave of AI-based digital twins"
+    },
+    "career": {
+        "board": {
+            "title": "Title",
+            "date": "Date"
+        }
+    },
+    "home": {
+        "title": "DigitalTwinWave",
+        "subtitle": "Leading the Wave of AI-Based Digital Twins",
+        "content": "DigitalTwinWave Inc., a spin-off company from Korea University's Department of Computer Science, builds virtual worlds identical to manufacturing sites and provides various solutions for construction and operation processes. By integrating video, sensor, and operational data with AI, we precisely model the status of facilities and processes while detecting errors and anomalies in real-time. We also propose optimal operation scenarios through simulation and intuitively visualize them in XR interfaces to support decision-making that reduces costs, time, and risks. We invite you to become a partner of DigitalTwinWave Inc., leading the wave of AI-based digital twins."
+    },
+    "contact": {
+        "phone": "+82-2-3290-3948",
+        "location": "Room 204A, Woonjung IT Building\nKorea University Seoul Campus (Natural Sciences)\n145 Anam-ro, Seongbuk-gu, Seoul, Korea\n(02841)"
+    },
+    "technology": [
+        {
+            "name": "3D Model Reconstruction",
+            "description": "3D model reconstruction including shape and position information from mobile RGB or RGB-D images",
+            "developers": [
+                {
+                    "name": "Dongmin Kim",
+                    "image": "people/kimdm.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/1-1.png",
+                    "isTallImage": false,
+                    "description": "Rebar model reconstruction"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/1-2.png",
+                    "isTallImage": false,
+                    "description": "Pipe model reconstruction"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
+                }
+            ]
+        },
+        {
+            "name": "Digital Twin Simulation",
+            "description": "Airflow, temperature change, and hazardous material propagation simulation in digital twins based on CAD/BIM or scan data",
+            "developers": [
+                {
+                    "name": "Heesung Lee",
+                    "image": "people/lee.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/2-1.png",
+                    "isTallImage": false,
+                    "description": "Residential space air conditioner airflow simulation"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/2-2.png",
+                    "isTallImage": false,
+                    "description": "Data center temperature change simulation"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=TDXuaqEOvng"
+                }
+            ]
+        },
+        {
+            "name": "AR-Based Construction & Shape Inspection",
+            "description": "Mobile AR solution development for inspecting consistency between structures/facilities and BIM designs during construction and operation phases",
+            "developers": [
+                {
+                    "name": "Junghyun Ahn",
+                    "image": "people/ahn.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/3-1.png",
+                    "isTallImage": false,
+                    "description": "Alignment between construction site columns and BIM (red)"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/3-2.png",
+                    "isTallImage": false,
+                    "description": "Pipe structure construction progress inspection"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
+                }
+            ]
+        },
+        {
+            "name": "Large-Scale 3D Model Real-Time Rendering",
+            "description": "Realistic rendering of ultra-large fab/plant BIM data using real-time ray tracing technology",
+            "developers": [
+                {
+                    "name": "Hangil Park",
+                    "image": "people/park.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/4-1.png",
+                    "isTallImage": false,
+                    "description": "Ultra-large BIM data rendering"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/4-2.png",
+                    "isTallImage": false,
+                    "description": "Revit renderer vs. real-time ray tracer"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=taQnAt6ZUF4"
+                }
+            ]
+        },
+        {
+            "name": "World Model & Physical AI",
+            "description": "Implementation of robots that understand real-world spaces to avoid collisions and optimize task and movement paths",
+            "developers": [
+                {
+                    "name": "Myunggon Kim",
+                    "image": "people/kimmg.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/5-1.png",
+                    "isTallImage": true,
+                    "description": "Logistics resource placement optimization"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/5-2.png",
+                    "isTallImage": true,
+                    "description": "Factory equipment anomaly detection and diagnosis"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/5-3.png",
+                    "isTallImage": true,
+                    "description": "Safe path generation and collision avoidance"
+                }
+            ]
+        }
+    ],
+    "cofounder": [
+        {
+            "name": "Junghyun Han",
+            "description": "Professor\nDept. of Computer Science\nKorea University",
+            "image": "people/han.jpg"
+        },
+        {
+            "name": "Hyungyup Kang",
+            "description": "Associate Professor\nDept. of Computer Science\nKorea University",
+            "image": "people/kang.jpg"
+        },
+        {
+            "name": "Seungwook Kim",
+            "description": "Assistant Professor\nDept. of Computer Engineering\nHankuk Univ. of Foreign Studies",
+            "image": "people/kimsw.png"
+        },
+        {
+            "name": "Junghyun Ahn",
+            "description": "Ph.D. Candidate\nDept. of Computer Science\nKorea University",
+            "image": "people/ahn.jpg"
+        }
+    ],
+    "history": {
+        "timeline": [
+            {
+                "time": "2024.10",
+                "content": "DigitalTwinWave Inc. established"
+            },
+            {
+                "time": "2025.09",
+                "content": "Became a subsidiary of Korea University Holdings"
+            },
+            {
+                "time": "2025.10",
+                "content": "Secured seed investment from Korea University-POSCO Fund"
+            },
+            {
+                "time": "2025.12",
+                "content": "First revenue achieved - Won \"Rebar 3D Reconstruction and Analysis Technology Development\" project"
+            }
+        ]
+    }
+}
