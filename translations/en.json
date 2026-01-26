@@ -120,13 +120,13 @@
                     "type": "image",
                     "image": "rnd/4-1.png",
                     "isTallImage": false,
-                    "description": "Ultra-large BIM data rendering"
+                    "description": "Large-scale BIM data rendering"
                 },
                 {
                     "type": "image",
                     "image": "rnd/4-2.png",
                     "isTallImage": false,
-                    "description": "Revit renderer vs. real-time ray tracer"
+                    "description": "Revit renderer vs Real-time ray tracer"
                 },
                 {
                     "type": "video",
