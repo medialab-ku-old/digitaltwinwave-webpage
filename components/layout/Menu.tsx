@@ -1,9 +1,10 @@
 "use client";
 
-import { Link } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { AnimatePresence, motion } from 'motion/react';
 import { RefObject, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { useLocale } from 'next-intl';
 
 
 const StyledWrapper = styled.div`
@@ -121,6 +122,8 @@ export function Menu() {
                         <MenuItem text="Careers" href="/careers" close={closeFunc}/>
                         <Bar/>
                         <MenuItem text="Contact" href="/contact" close={closeFunc}/>
+                        <Bar/>
+                        <MobileLanguageSwitcher close={closeFunc}/>
                     </div>
 
                 </motion.nav>
@@ -146,5 +149,40 @@ const MenuItem = ({ text, href, close }: ItemProps) => {
 const Bar = () => {
     return (
         <div className='bg-gray-100/50 h-0.5 mx-10 w-[50vw] my-3'></div>
+    )
+}
+
+const MobileLanguageSwitcher = ({ close }: { close: () => void }) => {
+    const locale = useLocale()
+    const pathname = usePathname()
+
+    return (
+        <div className="flex justify-center items-center gap-4 text-xl font-bold">
+            <Link
+                href={pathname}
+                locale="ko"
+                onClick={close}
+                className={`px-2 py-1 transition-all duration-200 ${
+                    locale === 'ko'
+                        ? 'text-white'
+                        : 'text-gray-500'
+                }`}
+            >
+                Korean
+            </Link>
+            <span className="text-gray-500">|</span>
+            <Link
+                href={pathname}
+                locale="en"
+                onClick={close}
+                className={`px-2 py-1 transition-all duration-200 ${
+                    locale === 'en'
+                        ? 'text-white'
+                        : 'text-gray-500'
+                }`}
+            >
+                English
+            </Link>
+        </div>
     )
 }
