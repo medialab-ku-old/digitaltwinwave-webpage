@@ -134,10 +134,10 @@ interface PageContentProps {
 
 const ContentGroup = ({ type, content, description, openLightbox }: ContentGroupProps & { openLightbox: () => void }) => {
     return (
-        <div className={`flex flex-col snap-center shrink-0 overflow-hidden w-fit ${description ? "" : "mb-11"}`}>
+        <div className={`flex flex-col snap-center shrink-0 overflow-hidden w-64 xl:w-72 ${description ? "" : "mb-11"}`}>
             {type === 'video' ? <ContentVideo {...(content as ContentVideoProps)} /> : <ContentImage {...(content as Omit<ContentImageProps, 'onClick'>)} onClick={openLightbox} />}
             {description &&
-                <h3 className="text-center font-semibold text-sm xl:text-md py-2 xl:py-3 whitespace-pre-wrap">
+                <h3 className="text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep">
                     {description}
                 </h3>
             }

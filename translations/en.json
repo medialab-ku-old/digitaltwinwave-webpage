@@ -19,7 +19,7 @@
     },
     "contact": {
         "phone": "+82-2-3290-3948",
-        "location": "Room 204A, Woonjung IT Building\nKorea University Seoul Campus (Natural Sciences)\n145 Anam-ro, Seongbuk-gu, Seoul, Korea\n(02841)"
+        "location": "Room 204A, JungWoonOh IT Building\nKorea University Seoul Campus (Natural Sciences)\n145 Anam-ro, Seongbuk-gu, Seoul, Rep. of Korea\n(02841)"
     },
     "technology": [
         {
@@ -55,7 +55,7 @@
             "description": "Airflow, temperature change, and hazardous material propagation simulation in digital twins based on CAD/BIM or scan data",
             "developers": [
                 {
-                    "name": "Heesung Lee",
+                    "name": "HuiSeong Lee",
                     "image": "people/lee.jpg"
                 }
             ],
@@ -172,7 +172,7 @@
             "image": "people/han.jpg"
         },
         {
-            "name": "Hyungyup Kang",
+            "name": "Hyeongyeop Kang",
             "description": "Associate Professor\nDept. of Computer Science\nKorea University",
             "image": "people/kang.jpg"
         },
