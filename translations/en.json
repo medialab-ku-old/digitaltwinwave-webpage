@@ -108,7 +108,7 @@
         },
         {
             "name": "Large-Scale 3D Model Real-Time Rendering",
-            "description": "Realistic rendering of ultra-large fab/plant BIM data using real-time ray tracing technology",
+            "description": "Realistic rendering of large-scale fab/plant BIM data using real-time ray tracing technology",
             "developers": [
                 {
                     "name": "Hangil Park",
