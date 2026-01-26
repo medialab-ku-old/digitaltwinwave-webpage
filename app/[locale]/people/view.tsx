@@ -95,7 +95,7 @@ const Dev = ({ name, image, tech, isDesktop, blurData }: DevProps) => {
                 <div className="text-2xl font-bold pt-1 whitespace-pre-wrap">
                     {name}
                 </div>
-                <div className="pt-1 whitespace-pre-wrap break-keep h-13">
+                <div className="pt-1 whitespace-pre-wrap break-keep">
                     {tech}
                 </div>
             </div>
