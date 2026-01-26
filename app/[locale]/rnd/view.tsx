@@ -158,7 +158,7 @@ const PageContent = ({ groups }: PageContentProps) => {
     }
 
     return (
-        <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-5 mt-12 items-center w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
+        <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-5 mt-12 items-start w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
             variants={itemVariants}>
             {groups.map((group, idx) => (
                 <ContentGroup key={idx} {...group} openLightbox={() => openLightbox(startIndices[idx])} />

@@ -86,7 +86,7 @@ interface DevProps {
 }
 const Dev = ({ name, image, tech, isDesktop, blurData }: DevProps) => {
     return (
-        <AnimateOnScroll className={`w-48 flex flex-col snap-center xl:snap-align-none items-center justify-center group bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-[box-shadow,border-color] duration-300`}
+        <AnimateOnScroll className={`w-48 flex flex-col snap-center xl:snap-align-none items-center group bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-blue-100 hover:border-blue-300 hover:shadow-lg transition-[box-shadow,border-color] duration-300`}
             custom={isDesktop}
             variants={itemVariants}
             once amount={0.2}>
