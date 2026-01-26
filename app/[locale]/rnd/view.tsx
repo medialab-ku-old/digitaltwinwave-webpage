@@ -208,7 +208,7 @@ const Navigator = ({ navItems, page }: NavigatorProps) => {
     }, [])
 
     return (
-        <nav className="hidden fixed top-[calc(50%-100px)] left-[50%] -translate-x-230 w-fit border-l-3 border-slate-900 xl:flex flex-col gap-2 p-3">
+        <nav className="hidden fixed top-[calc(50%-100px)] right-[calc(50%+480px)] w-fit border-l-3 border-slate-900 xl:flex flex-col gap-2 p-3">
             {navItems.map((item, idx) => (
                 <div key={idx} className="flex flex-col">
                     {idx === navItems.length - 1 && <div className="-translate-x-1 translate-y-px w-fit"><Badge small /></div>}
