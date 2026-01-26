@@ -1,0 +1,210 @@
+{
+    "metadata": {
+        "title": {
+            "default": "디지털트윈웨이브",
+            "template": "%s | 디지털트윈웨이브"
+        },
+        "description": "AI 기반 디지털트윈의 물결을 선도하는 디지털트윈웨이브"
+    },
+    "career": {
+        "board": {
+            "title": "제목",
+            "date": "작성일"
+        }
+    },
+    "home": {
+        "title": "디지털트윈웨이브",
+        "subtitle": "AI 기반 디지털트윈의 물결을 선도하는",
+        "content": "고려대학교 컴퓨터학과 spin-off 기업 ㈜디지털트윈웨이브는 제조 현장과 동일한 가상 세계를 구축하고 이를 기반으로 시공 및 운영 과정에 대한 각종 솔루션을 제공합니다. 영상·센서·운영 데이터를 AI로 통합하여 설비 및 공정의 상태를 정밀하게 모델링하고 오류 및 이상 징후를 실시간에 감지합니다. 또한, 시뮬레이션을 통한 최적의 운영 시나리오를 제안하고, 이를 XR 인터페이스에 직관적으로 시각화해서 비용·시간·리스크를 줄이는 의사결정을 지원합니다. AI 기반 디지털트윈의 물결을 선도하는 ㈜디지털트윈웨이브의 동반자가 되어 주시길 바랍니다."
+    },
+    "contact": {
+        "phone": "(02) 3290-3948",
+        "location": "서울특별시 성북구 안암로 145 고려대학교\n서울캠퍼스(자연계) 정운오IT교양관 204A호\n(02841)"
+    },
+    "technology": [
+        {
+            "name": "3차원 모델 재구성",
+            "description": "모바일 RGB 혹은 RGB-D 영상으로부터 형상 및 위치 정보를 포함하는 3차원 모델 재구성",
+            "developers": [
+                {
+                    "name": "김동민",
+                    "image": "people/kimdm.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/1-1.png",
+                    "isTallImage": false,
+                    "description": "철근 모델 재구성"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/1-2.png",
+                    "isTallImage": false,
+                    "description": "파이프 모델 재구성"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
+                }
+            ]
+        },
+        {
+            "name": "디지털트윈 시뮬레이션",
+            "description": "CAD/BIM 또는 스캔 데이터 기반 디지털트윈에서 기류, 온도 변화, 유해 물질 전파 시뮬레이션",
+            "developers": [
+                {
+                    "name": "이희성",
+                    "image": "people/lee.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/2-1.png",
+                    "isTallImage": false,
+                    "description": "주거 공간 에어컨 기류 시뮬레이션"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/2-2.png",
+                    "isTallImage": false,
+                    "description": "데이터센터 온도 변화 시뮬레이션"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=TDXuaqEOvng"
+                }
+            ]
+        },
+        {
+            "name": "AR 기반 시공 및 형상 유지 점검",
+            "description": "시공 및 운영 단계에서 구조/시설물과 BIM 설계 간 일치 여부를 점검하는 모바일 AR 솔루션 개발",
+            "developers": [
+                {
+                    "name": "안정현",
+                    "image": "people/ahn.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/3-1.png",
+                    "isTallImage": false,
+                    "description": "시공 현장 기둥과 BIM (붉은색) 간 정합 유지"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/3-2.png",
+                    "isTallImage": false,
+                    "description": "파이프 구조물 시공 진척도 점검"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
+                }
+            ]
+        },
+        {
+            "name": "대형 3차원 모델 실시간 렌더링",
+            "description": "실시간 ray tracing 기술을 사용한 초대형 fab/plant BIM 데이터 사실적 렌더링",
+            "developers": [
+                {
+                    "name": "박한길",
+                    "image": "people/park.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/4-1.png",
+                    "isTallImage": false,
+                    "description": "초대형 BIM 데이터 렌더링"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/4-2.png",
+                    "isTallImage": false,
+                    "description": "Revit 렌더러 vs. 실시간 ray tracer"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=taQnAt6ZUF4"
+                }
+            ]
+        },
+        {
+            "name": "World Model & Physical AI",
+            "description": "실세계 공간을 이해하여 충돌을 회피하고 작업 및 이동 경로를 최적화하는 로봇 구현",
+            "developers": [
+                {
+                    "name": "김명곤",
+                    "image": "people/kimmg.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/5-1.png",
+                    "isTallImage": true,
+                    "description": "물류 자원 배치 최적화"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/5-2.png",
+                    "isTallImage": true,
+                    "description": "공장 설비 이상 구간 탐지 및 진단"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/5-3.png",
+                    "isTallImage": true,
+                    "description": "안전 경로 생성 및 충돌 회피"
+                }
+            ]
+        }
+    ],
+    "cofounder": [
+        {
+            "name": "한정현",
+            "description": "고려대학교\n컴퓨터학과 교수",
+            "image": "people/han.jpg"
+        },
+        {
+            "name": "강형엽",
+            "description": "고려대학교\n컴퓨터학과 부교수",
+            "image": "people/kang.jpg"
+        },
+        {
+            "name": "김승욱",
+            "description": "한국외국어대학교\n컴퓨터공학부 조교수",
+            "image": "people/kimsw.png"
+        },
+        {
+            "name": "안정현",
+            "description": "고려대학교\n컴퓨터학과 박사과정",
+            "image": "people/ahn.jpg"
+        }
+    ],
+    "history": {
+        "timeline": [
+            {
+                "time": "2024.10",
+                "content": "(주)디지털트윈웨이브 설립"
+            },
+            {
+                "time": "2025.09",
+                "content": "고려대학교 기술지주 자회사 편입"
+            },
+            {
+                "time": "2025.10",
+                "content": "고려대-포스코 펀드 시드 투자 유치"
+            },
+            {
+                "time": "2025.12",
+                "content": "최초 매출 달성 - \"철근 3차원 재구성 및 분석 기술 개발\" 과제 수주"
+            }
+        ]
+    }
+}
