@@ -3,10 +3,11 @@ export const dynamic = 'force-static';
 import { getPostData, getPosts } from "@/lib/post";
 import { Metadata } from "next";
 import Post from "./view";
+import { setRequestLocale } from "next-intl/server";
 
 
 interface Props {
-    params: Promise<{ postId: string }>
+    params: Promise<{ locale: string, postId: string }>
 }
 
 export async function generateStaticParams() {
@@ -27,7 +28,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-    const { postId } = await params
+    const { locale, postId } = await params
+    setRequestLocale(locale)
+
     const postData = await getPostData(postId)
 
     return (
