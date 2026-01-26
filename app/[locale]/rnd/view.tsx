@@ -208,10 +208,10 @@ const Navigator = ({ navItems, page }: NavigatorProps) => {
     }, [])
 
     return (
-        <nav className="hidden fixed top-[calc(50%-100px)] right-[calc(50%+340px)] w-fit border-r-3 border-slate-900 xl:flex flex-col gap-2 p-3 text-right">
+        <nav className="hidden fixed top-[calc(50%-100px)] left-[50%] -translate-x-230 w-fit border-l-3 border-slate-900 xl:flex flex-col gap-2 p-3">
             {navItems.map((item, idx) => (
-                <div key={idx} className="flex flex-col items-end">
-                    {idx === navItems.length - 1 && <div className="translate-x-1 translate-y-px w-fit"><Badge small /></div>}
+                <div key={idx} className="flex flex-col">
+                    {idx === navItems.length - 1 && <div className="-translate-x-1 translate-y-px w-fit"><Badge small /></div>}
                     <span className={`cursor-pointer transition-all duration-300 hover:text-(--brand) whitespace-nowrap ${page === idx ? "text-slate-900 font-bold text-lg" : "text-gray-400"}`}
                         onClick={() => handleClick(idx)}>{item}</span>
                 </div>
