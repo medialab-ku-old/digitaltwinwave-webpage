@@ -139,7 +139,7 @@ const ContentGroup = ({ type, content, description, groupDescription, openLightb
         <div className={`flex flex-col overflow-hidden w-64 xl:w-72 ${description || groupDescription ? "" : "mb-11"}`}>
             {type === 'video' ? <ContentVideo {...(content as ContentVideoProps)} /> : <ContentImage {...(content as Omit<ContentImageProps, 'onClick'>)} onClick={openLightbox} />}
             {description &&
-                <h3 className="text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep">
+                <h3 className="xl:hidden text-center font-semibold text-sm py-2 break-keep">
                     {description}
                 </h3>
             }
@@ -164,9 +164,20 @@ const PageContent = ({ groups }: PageContentProps) => {
         }
     }
 
-    const groupDescriptions = groups
-        .map((group, idx) => group.groupDescription ? { startIdx: idx, text: group.groupDescription } : null)
-        .filter((item): item is { startIdx: number; text: string } => item !== null)
+    const coveredByGroup = new Set<number>()
+    const row2Items: { key: string; startCol: number; endCol: number; text: string }[] = []
+    groups.forEach((group, idx) => {
+        if (group.groupDescription) {
+            coveredByGroup.add(idx)
+            coveredByGroup.add(idx + 1)
+            row2Items.push({ key: `gd-${idx}`, startCol: idx + 1, endCol: idx + 3, text: group.groupDescription })
+        }
+    })
+    groups.forEach((group, idx) => {
+        if (group.description && !coveredByGroup.has(idx)) {
+            row2Items.push({ key: `d-${idx}`, startCol: idx + 1, endCol: idx + 2, text: group.description })
+        }
+    })
 
     return (
         <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
@@ -177,10 +188,10 @@ const PageContent = ({ groups }: PageContentProps) => {
                 </div>
             ))}
 
-            {groupDescriptions.map(({ startIdx, text }) => (
-                <h3 key={`gd-${startIdx}`}
+            {row2Items.map(({ key, startCol, endCol, text }) => (
+                <h3 key={key}
                     className="hidden xl:block text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep"
-                    style={{ gridColumn: `${startIdx + 1} / ${startIdx + 3}`, gridRow: 2 }}>
+                    style={{ gridColumn: `${startCol} / ${endCol}`, gridRow: 2 }}>
                     {text}
                 </h3>
             ))}
