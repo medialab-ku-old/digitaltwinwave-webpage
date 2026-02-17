@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "mcp__plugin_serena_serena__initial_instructions",
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)",
+      "Bash(node_modules/.bin/tsc:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)"
     ]
   }
 }

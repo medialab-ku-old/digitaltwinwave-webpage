@@ -123,14 +123,13 @@
                     "description": "Large-scale BIM data rendering"
                 },
                 {
-                    "type": "image",
-                    "image": "rnd/4-2.png",
-                    "isTallImage": false,
-                    "description": "Revit renderer vs Real-time ray tracer"
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
+                    "groupDescription": "Revit renderer vs. Real-time ray tracer"
                 },
                 {
                     "type": "video",
-                    "video": "https://www.youtube.com/watch?v=taQnAt6ZUF4"
+                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
                 }
             ]
         },

@@ -19,7 +19,8 @@ interface TechnologyItem {
         blurData?: string,
         video: string,
         isTallImage?: boolean,
-        description?: string
+        description?: string,
+        groupDescription?: string
     }[],
     references: string[]
 }
