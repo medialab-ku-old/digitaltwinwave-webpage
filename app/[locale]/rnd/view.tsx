@@ -144,7 +144,7 @@ const ContentGroup = ({ type, content, description, groupDescription, openLightb
                 </h3>
             }
             {!description && groupDescription &&
-                <h3 className="text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep">
+                <h3 className="xl:hidden text-center font-semibold text-sm py-2 break-keep">
                     {groupDescription}
                 </h3>
             }
@@ -164,13 +164,25 @@ const PageContent = ({ groups }: PageContentProps) => {
         }
     }
 
+    const groupDescriptions = groups
+        .map((group, idx) => group.groupDescription ? { startIdx: idx, text: group.groupDescription } : null)
+        .filter((item): item is { startIdx: number; text: string } => item !== null)
+
     return (
         <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
             variants={itemVariants}>
             {groups.map((group, idx) => (
-                <div key={idx} className="snap-center shrink-0">
+                <div key={idx} className="xl:[grid-row:1] snap-center shrink-0">
                     <ContentGroup {...group} openLightbox={() => openLightbox(startIndices[idx])} />
                 </div>
+            ))}
+
+            {groupDescriptions.map(({ startIdx, text }) => (
+                <h3 key={`gd-${startIdx}`}
+                    className="hidden xl:block text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep"
+                    style={{ gridColumn: `${startIdx + 1} / ${startIdx + 3}`, gridRow: 2 }}>
+                    {text}
+                </h3>
             ))}
 
             <Lightbox open={isOpen} index={index} close={closeLightbox} slides={slides} />
