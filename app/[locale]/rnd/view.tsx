@@ -144,7 +144,7 @@ const ContentGroup = ({ type, content, description, groupDescription, openLightb
                 </h3>
             }
             {!description && groupDescription &&
-                <h3 className="xl:hidden text-center font-semibold text-sm py-2 break-keep">
+                <h3 className="hidden text-center font-semibold text-sm py-2 break-keep">
                     {groupDescription}
                 </h3>
             }
@@ -168,10 +168,10 @@ const PageContent = ({ groups }: PageContentProps) => {
         <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
             variants={itemVariants}>
             {groups.map((group, idx) => (
-                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'xl:relative' : ''}`}>
+                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''}`}>
                     <ContentGroup {...group} openLightbox={() => openLightbox(startIndices[idx])} />
                     {group.groupDescription &&
-                        <h3 className="hidden xl:block absolute top-full text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep"
+                        <h3 className="absolute top-full text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep"
                             style={{ width: 'calc(200% + 1.25rem)' }}>
                             {group.groupDescription}
                         </h3>
