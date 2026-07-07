@@ -45,8 +45,9 @@
                     "description": "Pipe model reconstruction"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
+                    "type": "localVideo",
+                    "video": "rnd/1-video.mp4",
+                    "description": "Overview"
                 }
             ]
         },
@@ -73,13 +74,14 @@
                     "description": "Data center temperature change simulation"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=TDXuaqEOvng"
+                    "type": "localVideo",
+                    "video": "rnd/2-video.mp4",
+                    "description": "Overview"
                 }
             ]
         },
         {
-            "name": "AR-Based Construction & Shape Inspection",
+            "name": "AR-Based Shape Inspection",
             "description": "Mobile AR solution development for inspecting consistency between structures/facilities and BIM designs during construction and operation phases",
             "developers": [
                 {
@@ -101,8 +103,9 @@
                     "description": "Pipe structure construction progress inspection"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
+                    "type": "localVideo",
+                    "video": "rnd/3-video.mp4",
+                    "description": "Overview"
                 }
             ]
         },
@@ -123,13 +126,9 @@
                     "description": "Large-scale BIM data rendering"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
-                    "groupDescription": "Revit renderer vs. Real-time ray tracer"
-                },
-                {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
+                    "type": "localVideo",
+                    "video": "rnd/4-video.mp4",
+                    "description": "Overview"
                 }
             ]
         },

@@ -14,10 +14,10 @@ interface TechnologyItem {
         blurData?: string
     }[],
     contents: {
-        type: string,
+        type: "image" | "video" | "localVideo" | string,
         image: string,
         blurData?: string,
-        video: string,
+        video: string, // youtube URL when type==="video", local path (e.g. "rnd/1-video.mp4") when type==="localVideo"
         isTallImage?: boolean,
         description?: string,
         groupDescription?: string

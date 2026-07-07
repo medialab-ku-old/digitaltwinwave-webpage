@@ -30,6 +30,7 @@ export default function People({ cofounders, techs }: PeopleProps) {
                     }
                 </AnimateOnScroll>
             </section>
+            {/* Core Developers 섹션 임시 숨김 - 기존 코드 유지
             <section>
                 <Subtitle text="Core Developers" />
                 <AnimateOnScroll className="mt-8 xl:mt-15 flex xl:grid xl:grid-cols-[repeat(auto-fit,minmax(192px,1fr))] hide-scrollbar w-full overflow-x-auto gap-10 xl:gap-2 snap-x snap-proximity xl:snap-none mb-20 xl:justify-around px-20 xl:px-0"
@@ -46,6 +47,7 @@ export default function People({ cofounders, techs }: PeopleProps) {
                     }
                 </AnimateOnScroll>
             </section>
+            */}
         </main>
     )
 }

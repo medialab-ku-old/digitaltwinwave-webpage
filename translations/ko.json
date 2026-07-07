@@ -45,8 +45,9 @@
                     "description": "파이프 모델 재구성"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
+                    "type": "localVideo",
+                    "video": "rnd/1-video.mp4",
+                    "description": "개요"
                 }
             ]
         },
@@ -73,13 +74,14 @@
                     "description": "데이터센터 온도 변화 시뮬레이션"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=TDXuaqEOvng"
+                    "type": "localVideo",
+                    "video": "rnd/2-video.mp4",
+                    "description": "개요"
                 }
             ]
         },
         {
-            "name": "AR 기반 시공 및 형상 유지 점검",
+            "name": "AR 기반 형상 점검",
             "description": "시공 및 운영 단계에서 구조/시설물과 BIM 설계 간 일치 여부를 점검하는 모바일 AR 솔루션 개발",
             "developers": [
                 {
@@ -101,8 +103,9 @@
                     "description": "파이프 구조물 시공 진척도 점검"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
+                    "type": "localVideo",
+                    "video": "rnd/3-video.mp4",
+                    "description": "개요"
                 }
             ]
         },
@@ -123,13 +126,9 @@
                     "description": "초대형 BIM 데이터 렌더링"
                 },
                 {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
-                    "groupDescription": "Revit 렌더러 vs. 실시간 ray tracer"
-                },
-                {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
+                    "type": "localVideo",
+                    "video": "rnd/4-video.mp4",
+                    "description": "개요"
                 }
             ]
         },

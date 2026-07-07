@@ -3,10 +3,11 @@
 import { DownArrow } from "@/components/ui/DownArrow";
 import { Title } from "@/components/ui/Title";
 import useListRef from "@/hooks/useListRef";
-import { ContentImage, ContentImageProps, ContentVideo, ContentVideoProps } from "./content";
+import { ContentImage, ContentImageProps, ContentLocalVideo, ContentLocalVideoProps, ContentVideo, ContentVideoProps } from "./content";
 import { motion, stagger, Variants } from "motion/react";
 import { PropsWithChildren, useCallback, useEffect, useRef, useState } from "react";
 import Lightbox from 'yet-another-react-lightbox'
+import Video from 'yet-another-react-lightbox/plugins/video'
 import useLightbox from "@/hooks/useLightbox";
 import { normalizePath } from "@/lib/path";
 import ReactMarkdown from 'react-markdown';
@@ -108,12 +109,14 @@ const Page = ({ children, id, title, ref, description, badge }: PropsWithChildre
 const makePageContent = (tech: TechnologyItem): PageContentProps => {
     return {
         groups: tech.contents.map(content => ({
-            type: content.type as 'video' | 'image',
+            type: content.type as 'video' | 'image' | 'localVideo',
             content: content.type === 'image' ? {
                 image: content.image,
                 alt: content.description ?? "",
                 isTallImage: content.isTallImage,
                 blurData: content.blurData
+            } : content.type === 'localVideo' ? {
+                videoSrc: content.video
             } : {
                 videoUrl: content.video
             },
@@ -125,8 +128,8 @@ const makePageContent = (tech: TechnologyItem): PageContentProps => {
 
 
 interface ContentGroupProps {
-    type: 'image' | 'video'
-    content: ContentVideoProps | Omit<ContentImageProps, 'onClick'>
+    type: 'image' | 'video' | 'localVideo'
+    content: ContentVideoProps | Omit<ContentImageProps, 'onClick'> | Omit<ContentLocalVideoProps, 'onClick'>
     description?: string
     groupDescription?: string
 }
@@ -137,7 +140,9 @@ interface PageContentProps {
 const ContentGroup = ({ type, content, description, groupDescription, openLightbox }: ContentGroupProps & { openLightbox: () => void }) => {
     return (
         <div className={`flex flex-col overflow-hidden w-64 xl:w-72 ${description || groupDescription ? "" : "mb-11"}`}>
-            {type === 'video' ? <ContentVideo {...(content as ContentVideoProps)} /> : <ContentImage {...(content as Omit<ContentImageProps, 'onClick'>)} onClick={openLightbox} />}
+            {type === 'video' ? <ContentVideo {...(content as ContentVideoProps)} />
+                : type === 'localVideo' ? <ContentLocalVideo {...(content as Omit<ContentLocalVideoProps, 'onClick'>)} onClick={openLightbox} />
+                    : <ContentImage {...(content as Omit<ContentImageProps, 'onClick'>)} onClick={openLightbox} />}
             {description &&
                 <h3 className="text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep">
                     {description}
@@ -154,13 +159,24 @@ const ContentGroup = ({ type, content, description, groupDescription, openLightb
 const PageContent = ({ groups }: PageContentProps) => {
     const { index, isOpen, openLightbox, closeLightbox } = useLightbox()
 
-    const startIndices = [0]
+    // Build the lightbox slide list and map each group to its slide index.
+    // Only images and local videos open in the lightbox; YouTube embeds play inline, so they map to null.
     const slides = []
+    const slideIndexByGroup: (number | null)[] = []
     for (const group of groups) {
         if (group.type === "image") {
             const image = group.content as ContentImageProps
-            startIndices.push(startIndices[startIndices.length - 1] + 1)
+            slideIndexByGroup.push(slides.length)
             slides.push({ src: normalizePath(image.image) })
+        } else if (group.type === "localVideo") {
+            const video = group.content as ContentLocalVideoProps
+            slideIndexByGroup.push(slides.length)
+            slides.push({
+                type: "video" as const,
+                sources: [{ src: normalizePath(video.videoSrc), type: "video/mp4" }]
+            })
+        } else {
+            slideIndexByGroup.push(null)
         }
     }
 
@@ -169,7 +185,10 @@ const PageContent = ({ groups }: PageContentProps) => {
             variants={itemVariants}>
             {groups.map((group, idx) => (
                 <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''}`}>
-                    <ContentGroup {...group} openLightbox={() => openLightbox(startIndices[idx])} />
+                    <ContentGroup {...group} openLightbox={() => {
+                        const slideIndex = slideIndexByGroup[idx]
+                        if (slideIndex !== null) openLightbox(slideIndex)
+                    }} />
                     {group.groupDescription &&
                         <h3 className="absolute top-full text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep"
                             style={{ width: 'calc(200% + 1.25rem)' }}>
@@ -179,7 +198,7 @@ const PageContent = ({ groups }: PageContentProps) => {
                 </div>
             ))}
 
-            <Lightbox open={isOpen} index={index} close={closeLightbox} slides={slides} />
+            <Lightbox open={isOpen} index={index} close={closeLightbox} slides={slides} plugins={[Video]} />
         </motion.section>
     )
 }
