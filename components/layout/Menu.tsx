@@ -77,7 +77,7 @@ const StyledWrapper = styled.div`
 function MenuButton({ handleClick, ref }: { handleClick: () => void, ref: RefObject<HTMLInputElement | null>}) {
 
     return (
-        <div className='xl:hidden z-50 fixed top-4 right-4 scale-75'>
+        <div className='hidden z-50 fixed top-4 right-4 scale-75'>
             <StyledWrapper>
             <label className="burger" htmlFor="burger">
                 <input type="checkbox" id="burger" ref={ref} onClick={handleClick}/>

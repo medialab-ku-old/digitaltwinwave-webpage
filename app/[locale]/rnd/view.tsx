@@ -159,47 +159,57 @@ const ContentGroup = ({ type, content, description, groupDescription, openLightb
 const PageContent = ({ groups }: PageContentProps) => {
     const { index, isOpen, openLightbox, closeLightbox } = useLightbox()
 
-    // Build the lightbox slide list and map each group to its slide index.
-    // Only images and local videos open in the lightbox; YouTube embeds play inline, so they map to null.
+    // Build the lightbox slide list (over all groups, in original order) and split the groups
+    // into "primary" (images / youtube) and "overview" (localVideo). The overview video renders
+    // on its own centered row below the primary row — on mobile (horizontal-scroll) and desktop alike.
     const slides = []
-    const slideIndexByGroup: (number | null)[] = []
-    for (const group of groups) {
+    const primaryGroups: { group: ContentGroupProps, slideIndex: number | null, idx: number }[] = []
+    const overviewGroups: { group: ContentGroupProps, slideIndex: number | null, idx: number }[] = []
+    groups.forEach((group, idx) => {
+        let slideIndex: number | null = null
         if (group.type === "image") {
-            const image = group.content as ContentImageProps
-            slideIndexByGroup.push(slides.length)
-            slides.push({ src: normalizePath(image.image) })
+            slideIndex = slides.length
+            slides.push({ src: normalizePath((group.content as ContentImageProps).image) })
         } else if (group.type === "localVideo") {
-            const video = group.content as ContentLocalVideoProps
-            slideIndexByGroup.push(slides.length)
+            slideIndex = slides.length
             slides.push({
                 type: "video" as const,
-                sources: [{ src: normalizePath(video.videoSrc), type: "video/mp4" }]
+                sources: [{ src: normalizePath((group.content as ContentLocalVideoProps).videoSrc), type: "video/mp4" }]
             })
-        } else {
-            slideIndexByGroup.push(null)
         }
-    }
+        if (group.type === "localVideo") overviewGroups.push({ group, slideIndex, idx })
+        else primaryGroups.push({ group, slideIndex, idx })
+    })
 
     return (
-        <motion.section className="flex lg:grid lg:grid-cols-[repeat(3,max-content)] lg:justify-center lg:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x lg:snap-none snap-proximity"
-            variants={itemVariants}>
-            {groups.map((group, idx) => (
-                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''} ${group.type === 'localVideo' ? 'lg:col-span-3 lg:justify-self-center' : ''}`}>
-                    <ContentGroup {...group} openLightbox={() => {
-                        const slideIndex = slideIndexByGroup[idx]
-                        if (slideIndex !== null) openLightbox(slideIndex)
-                    }} />
-                    {group.groupDescription &&
-                        <h3 className="absolute top-full text-center font-semibold text-sm lg:text-md py-2 lg:py-3 break-keep"
-                            style={{ width: 'calc(200% + 1.25rem)' }}>
-                            {group.groupDescription}
-                        </h3>
-                    }
-                </div>
-            ))}
+        <>
+            <motion.section className="flex lg:grid lg:grid-cols-[repeat(3,max-content)] lg:justify-center lg:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x lg:snap-none snap-proximity"
+                variants={itemVariants}>
+                {primaryGroups.map(({ group, slideIndex, idx }) => (
+                    <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''}`}>
+                        <ContentGroup {...group} openLightbox={() => { if (slideIndex !== null) openLightbox(slideIndex) }} />
+                        {group.groupDescription &&
+                            <h3 className="absolute top-full text-center font-semibold text-sm lg:text-md py-2 lg:py-3 break-keep"
+                                style={{ width: 'calc(200% + 1.25rem)' }}>
+                                {group.groupDescription}
+                            </h3>
+                        }
+                    </div>
+                ))}
+            </motion.section>
+
+            {overviewGroups.length > 0 &&
+                <motion.section className="flex justify-center w-full px-10 mt-4" variants={itemVariants}>
+                    {overviewGroups.map(({ group, slideIndex, idx }) => (
+                        <div key={idx} className="shrink-0">
+                            <ContentGroup {...group} openLightbox={() => { if (slideIndex !== null) openLightbox(slideIndex) }} />
+                        </div>
+                    ))}
+                </motion.section>
+            }
 
             <Lightbox open={isOpen} index={index} close={closeLightbox} slides={slides} plugins={[Video]} />
-        </motion.section>
+        </>
     )
 }
 
