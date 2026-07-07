@@ -12,7 +12,7 @@ export const Header = () => {
                         <Image src="/logo.png" width={640} height={480} alt="logo" className="w-8 xl:w-20 h-auto cursor-pointer" loading="eager"/>
                     </Link>
                 </div>
-                <div className="flex justify-start items-center font-semibold ml-1 xl:ml-36">
+                <div className="flex-1 flex justify-center xl:flex-none xl:justify-start items-center font-semibold xl:ml-36">
                     <HeaderItem text="People" href="/people"/>
                     <HeaderItem text="History" href="/history"/>
                     <HeaderItem text="R&D" href="/rnd"/>
