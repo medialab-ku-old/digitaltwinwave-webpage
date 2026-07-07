@@ -38,7 +38,7 @@ export default function Rnd({ techs }: { techs: TechnologyItem[] }) {
     }, [])
 
     return (
-        <main className="w-screen xl:w-5xl mx-auto overflow-y-auto h-screen snap-y snap-mandatory hide-scrollbar">
+        <main className="w-screen lg:w-5xl mx-auto overflow-y-auto h-screen snap-y snap-mandatory hide-scrollbar">
             <div className="snap-start snap-always h-screen flex flex-col justify-center relative" ref={getTargetRef(0)}>
                 <Title text="R&D" className="" noMargin />
                 <DownArrow />
@@ -90,13 +90,13 @@ const Page = ({ children, id, title, ref, description, badge }: PropsWithChildre
             variants={pageVariants} initial="hidden" whileInView="visible"
             viewport={{ amount: 0.6 }}>
             <div>
-                <motion.h2 className="max-w-[90vw] xl:max-w-none text-3xl xl:text-4xl font-bold mx-auto break-keep flex justify-center items-center text-center whitespace-pre-wrap"
+                <motion.h2 className="max-w-[90vw] lg:max-w-none text-3xl lg:text-4xl font-bold mx-auto break-keep flex justify-center items-center text-center whitespace-pre-wrap"
                     variants={itemVariants}
                 >
                     <span>{title}</span>
                     {badge && <div className=""><Badge /></div>}
                 </motion.h2>
-                <motion.h3 className="text-sm xl:text-lg font-medium pt-7 text-center max-w-[90vw] xl:max-w-175 mx-auto whitespace-pre-wrap break-keep"
+                <motion.h3 className="text-sm lg:text-lg font-medium pt-7 text-center max-w-[90vw] lg:max-w-175 mx-auto whitespace-pre-wrap break-keep"
                     variants={itemVariants}>
                     {description}
                 </motion.h3>
@@ -139,12 +139,12 @@ interface PageContentProps {
 
 const ContentGroup = ({ type, content, description, groupDescription, openLightbox }: ContentGroupProps & { openLightbox: () => void }) => {
     return (
-        <div className={`flex flex-col overflow-hidden w-64 xl:w-72 ${description || groupDescription ? "" : "mb-11"}`}>
+        <div className={`flex flex-col overflow-hidden w-64 lg:w-72 ${description || groupDescription ? "" : "mb-11"}`}>
             {type === 'video' ? <ContentVideo {...(content as ContentVideoProps)} />
                 : type === 'localVideo' ? <ContentLocalVideo {...(content as Omit<ContentLocalVideoProps, 'onClick'>)} onClick={openLightbox} />
                     : <ContentImage {...(content as Omit<ContentImageProps, 'onClick'>)} onClick={openLightbox} />}
             {description &&
-                <h3 className="text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep">
+                <h3 className="text-center font-semibold text-sm lg:text-md py-2 lg:py-3 break-keep">
                     {description}
                 </h3>
             }
@@ -181,16 +181,16 @@ const PageContent = ({ groups }: PageContentProps) => {
     }
 
     return (
-        <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
+        <motion.section className="flex lg:grid lg:grid-cols-[repeat(3,max-content)] lg:justify-center lg:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x lg:snap-none snap-proximity"
             variants={itemVariants}>
             {groups.map((group, idx) => (
-                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''} ${group.type === 'localVideo' ? 'xl:col-span-3 xl:justify-self-center' : ''}`}>
+                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''} ${group.type === 'localVideo' ? 'lg:col-span-3 lg:justify-self-center' : ''}`}>
                     <ContentGroup {...group} openLightbox={() => {
                         const slideIndex = slideIndexByGroup[idx]
                         if (slideIndex !== null) openLightbox(slideIndex)
                     }} />
                     {group.groupDescription &&
-                        <h3 className="absolute top-full text-center font-semibold text-sm xl:text-md py-2 xl:py-3 break-keep"
+                        <h3 className="absolute top-full text-center font-semibold text-sm lg:text-md py-2 lg:py-3 break-keep"
                             style={{ width: 'calc(200% + 1.25rem)' }}>
                             {group.groupDescription}
                         </h3>
@@ -208,8 +208,8 @@ interface PageReferencesProps {
 }
 const PageReferences = ({ references }: PageReferencesProps) => {
     return (
-        <motion.section className="mx-4 xl:mx-14 leading-tight xl:leading-normal draggable mt-2 overflow-x-scroll xl:overflow-hidden" variants={itemVariants}>
-            <ul className="list-disc pl-5 space-y-2 text-xs xl:text-base">
+        <motion.section className="mx-4 lg:mx-14 leading-tight lg:leading-normal draggable mt-2 overflow-x-scroll lg:overflow-hidden" variants={itemVariants}>
+            <ul className="list-disc pl-5 space-y-2 text-xs lg:text-base">
                 {references.map((ref, idx) => (
                     <li key={idx} className="marker:text-current">
                         <ReactMarkdown
