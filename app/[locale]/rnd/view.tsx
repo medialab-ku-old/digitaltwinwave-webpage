@@ -165,7 +165,8 @@ const PageContent = ({ groups }: PageContentProps) => {
     const slides = []
     const primaryGroups: { group: ContentGroupProps, slideIndex: number | null, idx: number }[] = []
     const overviewGroups: { group: ContentGroupProps, slideIndex: number | null, idx: number }[] = []
-    groups.forEach((group, idx) => {
+    for (let idx = 0; idx < groups.length; idx++) {
+        const group = groups[idx]
         let slideIndex: number | null = null
         if (group.type === "image") {
             slideIndex = slides.length
@@ -179,7 +180,7 @@ const PageContent = ({ groups }: PageContentProps) => {
         }
         if (group.type === "localVideo") overviewGroups.push({ group, slideIndex, idx })
         else primaryGroups.push({ group, slideIndex, idx })
-    })
+    }
 
     return (
         <>
