@@ -184,7 +184,7 @@ const PageContent = ({ groups }: PageContentProps) => {
         <motion.section className="flex xl:grid xl:grid-cols-[repeat(3,max-content)] xl:justify-center xl:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x xl:snap-none snap-proximity"
             variants={itemVariants}>
             {groups.map((group, idx) => (
-                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''}`}>
+                <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''} ${group.type === 'localVideo' ? 'xl:col-span-3 xl:justify-self-center' : ''}`}>
                     <ContentGroup {...group} openLightbox={() => {
                         const slideIndex = slideIndexByGroup[idx]
                         if (slideIndex !== null) openLightbox(slideIndex)

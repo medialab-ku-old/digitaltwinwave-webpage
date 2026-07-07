@@ -45,6 +45,10 @@
                     "description": "파이프 모델 재구성"
                 },
                 {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
+                },
+                {
                     "type": "localVideo",
                     "video": "rnd/1-video.mp4",
                     "description": "개요"
@@ -72,6 +76,10 @@
                     "image": "rnd/2-2.png",
                     "isTallImage": false,
                     "description": "데이터센터 온도 변화 시뮬레이션"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=TDXuaqEOvng"
                 },
                 {
                     "type": "localVideo",
@@ -103,6 +111,10 @@
                     "description": "파이프 구조물 시공 진척도 점검"
                 },
                 {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
+                },
+                {
                     "type": "localVideo",
                     "video": "rnd/3-video.mp4",
                     "description": "개요"
@@ -124,6 +136,15 @@
                     "image": "rnd/4-1.png",
                     "isTallImage": false,
                     "description": "초대형 BIM 데이터 렌더링"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
+                    "groupDescription": "Revit 렌더러 vs. 실시간 ray tracer"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
                 },
                 {
                     "type": "localVideo",
