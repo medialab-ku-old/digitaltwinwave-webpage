@@ -184,7 +184,7 @@ const PageContent = ({ groups }: PageContentProps) => {
 
     return (
         <>
-            <motion.section className="flex lg:grid lg:grid-cols-[repeat(3,max-content)] lg:justify-center lg:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x lg:snap-none snap-proximity"
+            <motion.section className="flex justify-center lg:grid lg:grid-cols-[repeat(3,max-content)] lg:justify-center lg:max-h-[60vh] flex-row hide-scrollbar gap-x-5 gap-y-0 mt-12 items-start w-full px-10 overflow-x-auto snap-x lg:snap-none snap-proximity"
                 variants={itemVariants}>
                 {primaryGroups.map(({ group, slideIndex, idx }) => (
                     <div key={idx} className={`snap-center shrink-0 ${group.groupDescription ? 'relative' : ''}`}>
