@@ -23,34 +23,34 @@
     },
     "technology": [
         {
-            "name": "3D Model Reconstruction",
-            "description": "3D model reconstruction including shape and position information from mobile RGB or RGB-D images",
+            "name": "AR-Based Shape Inspection",
+            "description": "Mobile AR solution development for inspecting consistency between structures/facilities and BIM designs during construction and operation phases",
             "developers": [
                 {
-                    "name": "Dongmin Kim",
-                    "image": "people/kimdm.jpg"
+                    "name": "Junghyun Ahn",
+                    "image": "people/ahn.jpg"
                 }
             ],
             "contents": [
                 {
                     "type": "image",
-                    "image": "rnd/1-1.png",
+                    "image": "rnd/3-1.png",
                     "isTallImage": false,
-                    "description": "Rebar model reconstruction"
+                    "description": "Alignment between construction site columns and BIM (red)"
                 },
                 {
                     "type": "image",
-                    "image": "rnd/1-2.png",
+                    "image": "rnd/3-2.png",
                     "isTallImage": false,
-                    "description": "Pipe model reconstruction"
+                    "description": "Pipe structure construction progress inspection"
                 },
                 {
                     "type": "video",
-                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
+                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
                 },
                 {
                     "type": "localVideo",
-                    "video": "rnd/1-video.mp4",
+                    "video": "rnd/3-video.mp4",
                     "description": "Overview"
                 }
             ]
@@ -89,34 +89,34 @@
             ]
         },
         {
-            "name": "AR-Based Shape Inspection",
-            "description": "Mobile AR solution development for inspecting consistency between structures/facilities and BIM designs during construction and operation phases",
+            "name": "3D Model Reconstruction",
+            "description": "3D model reconstruction including shape and position information from mobile RGB or RGB-D images",
             "developers": [
                 {
-                    "name": "Junghyun Ahn",
-                    "image": "people/ahn.jpg"
+                    "name": "Dongmin Kim",
+                    "image": "people/kimdm.jpg"
                 }
             ],
             "contents": [
                 {
                     "type": "image",
-                    "image": "rnd/3-1.png",
+                    "image": "rnd/1-1.png",
                     "isTallImage": false,
-                    "description": "Alignment between construction site columns and BIM (red)"
+                    "description": "Rebar model reconstruction"
                 },
                 {
                     "type": "image",
-                    "image": "rnd/3-2.png",
+                    "image": "rnd/1-2.png",
                     "isTallImage": false,
-                    "description": "Pipe structure construction progress inspection"
+                    "description": "Pipe model reconstruction"
                 },
                 {
                     "type": "video",
-                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
+                    "video": "https://www.youtube.com/watch?v=p0oJOcvhXQ4"
                 },
                 {
                     "type": "localVideo",
-                    "video": "rnd/3-video.mp4",
+                    "video": "rnd/1-video.mp4",
                     "description": "Overview"
                 }
             ]

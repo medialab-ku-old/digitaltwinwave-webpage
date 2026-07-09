@@ -30,7 +30,7 @@ const getVideoId = (url: string): string | null => {
 export const ContentVideo = ({ videoUrl }: ContentVideoProps) => {
     const videoId = getVideoId(videoUrl)
     return (
-        <div className="w-64 lg:w-72">
+        <div className="w-[22vw] lg:w-72">
             {videoId &&
                 <YouTubeEmbed videoid={videoId}
                     params={`mute=1&controls=1&fs=1`} />
@@ -41,7 +41,7 @@ export const ContentVideo = ({ videoUrl }: ContentVideoProps) => {
 
 export const ContentImage = ({ image, alt, isTallImage, blurData, onClick }: ContentImageProps) => {
     return (
-        <div className={`${(!isTallImage) ? "w-64 lg:w-72 aspect-video" : "h-72 aspect-31/40"} cursor-pointer relative group overflow-hidden`} onClick={onClick}>
+        <div className={`${(!isTallImage) ? "w-[22vw] lg:w-72 aspect-video" : "w-[22vw] aspect-31/40 lg:w-auto lg:h-72"} cursor-pointer relative group overflow-hidden`} onClick={onClick}>
             <Image
                 src={normalizePath(image)}
                 alt={alt}
@@ -62,10 +62,10 @@ export const ContentImage = ({ image, alt, isTallImage, blurData, onClick }: Con
 
 export const ContentLocalVideo = ({ videoSrc, onClick }: ContentLocalVideoProps) => {
     return (
-        <div className="w-64 lg:w-72 aspect-video cursor-pointer relative group overflow-hidden bg-black" onClick={onClick}>
-            {/* preload="metadata" + #t=0.1 shows the first frame as a thumbnail without downloading the whole clip; playback happens large in the lightbox */}
+        <div className="w-[22vw] lg:w-72 aspect-video cursor-pointer relative group overflow-hidden bg-black" onClick={onClick}>
+            {/* preload="metadata" + #t=1 shows a frame ~1s in as the thumbnail (avoids a black first frame); playback happens from the start in the lightbox */}
             <video
-                src={`${normalizePath(videoSrc)}#t=0.1`}
+                src={`${normalizePath(videoSrc)}#t=1`}
                 muted
                 playsInline
                 preload="metadata"
