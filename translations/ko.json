@@ -23,39 +23,6 @@
     },
     "technology": [
         {
-            "name": "AR 기반 형상 점검",
-            "description": "시공 및 운영 단계에서 구조/시설물과 BIM 설계 간 일치 여부를 점검하는 모바일 AR 솔루션 개발",
-            "developers": [
-                {
-                    "name": "안정현",
-                    "image": "people/ahn.jpg"
-                }
-            ],
-            "contents": [
-                {
-                    "type": "image",
-                    "image": "rnd/3-1.png",
-                    "isTallImage": false,
-                    "description": "시공 현장 기둥과 BIM (붉은색) 간 정합 유지"
-                },
-                {
-                    "type": "image",
-                    "image": "rnd/3-2.png",
-                    "isTallImage": false,
-                    "description": "파이프 구조물 시공 진척도 점검"
-                },
-                {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
-                },
-                {
-                    "type": "localVideo",
-                    "video": "rnd/3-video.mp4",
-                    "description": "개요"
-                }
-            ]
-        },
-        {
             "name": "디지털트윈 시뮬레이션",
             "description": "CAD/BIM 또는 스캔 데이터 기반 디지털트윈에서 기류, 온도 변화, 유해 물질 전파 시뮬레이션",
             "developers": [
@@ -84,6 +51,38 @@
                 {
                     "type": "localVideo",
                     "video": "rnd/2-video.mp4",
+                    "description": "개요"
+                }
+            ]
+        },
+        {
+            "name": "대형 3차원 모델 실시간 렌더링",
+            "description": "실시간 ray tracing 기술을 사용한 초대형 fab/plant BIM 데이터 사실적 렌더링",
+            "developers": [
+                {
+                    "name": "박한길",
+                    "image": "people/park.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/4-1.png",
+                    "isTallImage": false,
+                    "description": "초대형 BIM 데이터 렌더링"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
+                    "groupDescription": "Revit 렌더러 vs. 실시간 ray tracer"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
+                },
+                {
+                    "type": "localVideo",
+                    "video": "rnd/4-video.mp4",
                     "description": "개요"
                 }
             ]
@@ -122,33 +121,34 @@
             ]
         },
         {
-            "name": "대형 3차원 모델 실시간 렌더링",
-            "description": "실시간 ray tracing 기술을 사용한 초대형 fab/plant BIM 데이터 사실적 렌더링",
+            "name": "AR 기반 형상 점검",
+            "description": "시공 및 운영 단계에서 구조/시설물과 BIM 설계 간 일치 여부를 점검하는 모바일 AR 솔루션 개발",
             "developers": [
                 {
-                    "name": "박한길",
-                    "image": "people/park.jpg"
+                    "name": "안정현",
+                    "image": "people/ahn.jpg"
                 }
             ],
             "contents": [
                 {
                     "type": "image",
-                    "image": "rnd/4-1.png",
+                    "image": "rnd/3-1.png",
                     "isTallImage": false,
-                    "description": "초대형 BIM 데이터 렌더링"
+                    "description": "시공 현장 기둥과 BIM (붉은색) 간 정합 유지"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/3-2.png",
+                    "isTallImage": false,
+                    "description": "파이프 구조물 시공 진척도 점검"
                 },
                 {
                     "type": "video",
-                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
-                    "groupDescription": "Revit 렌더러 vs. 실시간 ray tracer"
-                },
-                {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
+                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
                 },
                 {
                     "type": "localVideo",
-                    "video": "rnd/4-video.mp4",
+                    "video": "rnd/3-video.mp4",
                     "description": "개요"
                 }
             ]

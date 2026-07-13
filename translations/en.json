@@ -23,39 +23,6 @@
     },
     "technology": [
         {
-            "name": "AR-Based Shape Inspection",
-            "description": "Mobile AR solution development for inspecting consistency between structures/facilities and BIM designs during construction and operation phases",
-            "developers": [
-                {
-                    "name": "Junghyun Ahn",
-                    "image": "people/ahn.jpg"
-                }
-            ],
-            "contents": [
-                {
-                    "type": "image",
-                    "image": "rnd/3-1.png",
-                    "isTallImage": false,
-                    "description": "Alignment between construction site columns and BIM (red)"
-                },
-                {
-                    "type": "image",
-                    "image": "rnd/3-2.png",
-                    "isTallImage": false,
-                    "description": "Pipe structure construction progress inspection"
-                },
-                {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
-                },
-                {
-                    "type": "localVideo",
-                    "video": "rnd/3-video.mp4",
-                    "description": "Overview"
-                }
-            ]
-        },
-        {
             "name": "Digital Twin Simulation",
             "description": "Airflow, temperature change, and hazardous material propagation simulation in digital twins based on CAD/BIM or scan data",
             "developers": [
@@ -84,6 +51,38 @@
                 {
                     "type": "localVideo",
                     "video": "rnd/2-video.mp4",
+                    "description": "Overview"
+                }
+            ]
+        },
+        {
+            "name": "Large-Scale 3D Model Real-Time Rendering",
+            "description": "Realistic rendering of large-scale fab/plant BIM data using real-time ray tracing technology",
+            "developers": [
+                {
+                    "name": "Hangil Park",
+                    "image": "people/park.jpg"
+                }
+            ],
+            "contents": [
+                {
+                    "type": "image",
+                    "image": "rnd/4-1.png",
+                    "isTallImage": false,
+                    "description": "Large-scale BIM data rendering"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
+                    "groupDescription": "Revit renderer vs. Real-time ray tracer"
+                },
+                {
+                    "type": "video",
+                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
+                },
+                {
+                    "type": "localVideo",
+                    "video": "rnd/4-video.mp4",
                     "description": "Overview"
                 }
             ]
@@ -122,33 +121,34 @@
             ]
         },
         {
-            "name": "Large-Scale 3D Model Real-Time Rendering",
-            "description": "Realistic rendering of large-scale fab/plant BIM data using real-time ray tracing technology",
+            "name": "AR-Based Shape Inspection",
+            "description": "Mobile AR solution development for inspecting consistency between structures/facilities and BIM designs during construction and operation phases",
             "developers": [
                 {
-                    "name": "Hangil Park",
-                    "image": "people/park.jpg"
+                    "name": "Junghyun Ahn",
+                    "image": "people/ahn.jpg"
                 }
             ],
             "contents": [
                 {
                     "type": "image",
-                    "image": "rnd/4-1.png",
+                    "image": "rnd/3-1.png",
                     "isTallImage": false,
-                    "description": "Large-scale BIM data rendering"
+                    "description": "Alignment between construction site columns and BIM (red)"
+                },
+                {
+                    "type": "image",
+                    "image": "rnd/3-2.png",
+                    "isTallImage": false,
+                    "description": "Pipe structure construction progress inspection"
                 },
                 {
                     "type": "video",
-                    "video": "https://www.youtube.com/watch?v=ftyNvaP5baQ",
-                    "groupDescription": "Revit renderer vs. Real-time ray tracer"
-                },
-                {
-                    "type": "video",
-                    "video": "https://www.youtube.com/watch?v=b3HvL7Uqj5A"
+                    "video": "https://www.youtube.com/watch?v=yGVlxJWGJvA"
                 },
                 {
                     "type": "localVideo",
-                    "video": "rnd/4-video.mp4",
+                    "video": "rnd/3-video.mp4",
                     "description": "Overview"
                 }
             ]
