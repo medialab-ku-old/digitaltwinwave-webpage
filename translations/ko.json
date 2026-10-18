@@ -158,8 +158,13 @@
                 },
                 {
                     "type": "localVideo",
-                    "video": "rnd/3-video.mp4",
-                    "description": "개요"
+                    "video": "rnd/3-video-ko.mp4",
+                    "description": "개요(국문)"
+                },
+                {
+                    "type": "localVideo",
+                    "video": "rnd/3-video-en.mp4",
+                    "description": "개요(영문)"
                 }
             ]
         },

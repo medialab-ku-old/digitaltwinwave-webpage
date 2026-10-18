@@ -158,8 +158,13 @@
                 },
                 {
                     "type": "localVideo",
-                    "video": "rnd/3-video.mp4",
-                    "description": "Overview"
+                    "video": "rnd/3-video-ko.mp4",
+                    "description": "Overview (Korean)"
+                },
+                {
+                    "type": "localVideo",
+                    "video": "rnd/3-video-en.mp4",
+                    "description": "Overview (English)"
                 }
             ]
         },
