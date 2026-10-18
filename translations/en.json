@@ -50,8 +50,13 @@
                 },
                 {
                     "type": "localVideo",
+                    "video": "rnd/2-video-ko.mp4",
+                    "description": "Overview (Korean)"
+                },
+                {
+                    "type": "localVideo",
                     "video": "rnd/2-video-en.mp4",
-                    "description": "Overview"
+                    "description": "Overview (English)"
                 }
             ]
         },
@@ -115,8 +120,13 @@
                 },
                 {
                     "type": "localVideo",
+                    "video": "rnd/1-video-ko.mp4",
+                    "description": "Overview (Korean)"
+                },
+                {
+                    "type": "localVideo",
                     "video": "rnd/1-video-en.mp4",
-                    "description": "Overview"
+                    "description": "Overview (English)"
                 }
             ]
         },

@@ -51,7 +51,12 @@
                 {
                     "type": "localVideo",
                     "video": "rnd/2-video-ko.mp4",
-                    "description": "개요"
+                    "description": "개요(국문)"
+                },
+                {
+                    "type": "localVideo",
+                    "video": "rnd/2-video-en.mp4",
+                    "description": "개요(영문)"
                 }
             ]
         },
@@ -116,7 +121,12 @@
                 {
                     "type": "localVideo",
                     "video": "rnd/1-video-ko.mp4",
-                    "description": "개요"
+                    "description": "개요(국문)"
+                },
+                {
+                    "type": "localVideo",
+                    "video": "rnd/1-video-en.mp4",
+                    "description": "개요(영문)"
                 }
             ]
         },

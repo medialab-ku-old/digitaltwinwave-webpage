@@ -200,7 +200,7 @@ const PageContent = ({ groups }: PageContentProps) => {
             </motion.section>
 
             {overviewGroups.length > 0 &&
-                <motion.section className="flex justify-center w-full px-1 lg:px-10 mt-4" variants={itemVariants}>
+                <motion.section className="flex justify-center gap-x-1.5 lg:gap-x-5 w-full px-1 lg:px-10 mt-4" variants={itemVariants}>
                     {overviewGroups.map(({ group, slideIndex, idx }) => (
                         <div key={idx} className="shrink-0">
                             <ContentGroup {...group} openLightbox={() => { if (slideIndex !== null) openLightbox(slideIndex) }} />
