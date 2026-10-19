@@ -175,6 +175,7 @@ const PageContent = ({ groups }: PageContentProps) => {
             slideIndex = slides.length
             slides.push({
                 type: "video" as const,
+                autoPlay: true,
                 sources: [{ src: normalizePath((group.content as ContentLocalVideoProps).videoSrc), type: "video/mp4" }]
             })
         }
