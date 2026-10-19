@@ -253,11 +253,11 @@ const Navigator = ({ navItems, page }: NavigatorProps) => {
     }, [])
 
     return (
-        <nav className="flex fixed z-40 top-[calc(50%-90px)] left-1 w-[74px] gap-1 p-1 text-[10px] leading-tight border-l-3 border-slate-900 flex-col xl:left-auto xl:right-[calc(50%+480px)] xl:w-fit xl:gap-2 xl:p-3 xl:text-base">
+        <nav className="flex fixed z-40 top-[calc(50%-90px)] left-1 w-[74px] gap-1 p-1 text-[10px] leading-tight border-l-3 border-slate-900 flex-col xl:left-auto xl:right-[calc(50%+480px)] xl:w-fit xl:max-w-[calc(50%-488px)] xl:gap-2 xl:p-3 xl:text-base">
             {navItems.map((item, idx) => (
                 <div key={idx} className="flex flex-col">
                     {idx === navItems.length - 1 && <div className="-translate-x-1 translate-y-px w-fit"><Badge small /></div>}
-                    <span className={`cursor-pointer transition-all duration-300 hover:text-(--brand) break-keep lg:whitespace-nowrap ${page === idx ? "text-slate-900 font-bold lg:text-lg" : "text-gray-400"}`}
+                    <span className={`cursor-pointer transition-all duration-300 hover:text-(--brand) break-keep ${page === idx ? "text-slate-900 font-bold xl:text-lg" : "text-gray-400"}`}
                         onClick={() => handleClick(idx)}>{item}</span>
                 </div>
             ))}
