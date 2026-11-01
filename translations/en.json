@@ -211,11 +211,6 @@
             "image": "people/han.jpg"
         },
         {
-            "name": "Hyeongyeop Kang",
-            "description": "Associate Professor\nDept. of Computer Science\nKorea University",
-            "image": "people/kang.jpg"
-        },
-        {
             "name": "Seungwook Kim",
             "description": "Assistant Professor\nDept. of Computer Engineering\nHankuk Univ. of Foreign Studies",
             "image": "people/kimsw.png"
@@ -229,7 +224,7 @@
     "history": {
         "timeline": [
             {
-                "time": "2024.10",
+                "time": "2024.11",
                 "content": "DigitalTwinWave Inc. established"
             },
             {

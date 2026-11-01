@@ -211,11 +211,6 @@
             "image": "people/han.jpg"
         },
         {
-            "name": "강형엽",
-            "description": "고려대학교\n컴퓨터학과 부교수",
-            "image": "people/kang.jpg"
-        },
-        {
             "name": "김승욱",
             "description": "한국외국어대학교\n컴퓨터공학부 조교수",
             "image": "people/kimsw.png"
@@ -229,7 +224,7 @@
     "history": {
         "timeline": [
             {
-                "time": "2024.10",
+                "time": "2024.11",
                 "content": "(주)디지털트윈웨이브 설립"
             },
             {
