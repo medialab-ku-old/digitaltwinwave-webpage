@@ -18,7 +18,7 @@ export default function People({ cofounders, techs }: PeopleProps) {
             <Title text="People" />
             <section>
                 <Subtitle text="Founders" />
-                <AnimateOnScroll className="mt-8 xl:mt-15 hide-scrollbar flex xl:grid xl:grid-cols-[repeat(auto-fit,minmax(222px,1fr))] flex-row w-full overflow-x-auto snap-x snap-proximity xl:snap-none xl:justify-around gap-10 px-20 xl:px-0 mb-20"
+                <AnimateOnScroll className="mt-8 xl:mt-15 hide-scrollbar flex xl:grid xl:grid-cols-[repeat(auto-fit,minmax(222px,1fr))] flex-row w-full overflow-x-auto snap-x snap-proximity xl:snap-none justify-center-safe xl:justify-around gap-10 px-20 xl:px-0 mb-20"
                     custom={isDesktop}
                     variants={containerVariants}
                     initial="hidden"
